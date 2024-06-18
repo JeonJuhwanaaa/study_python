@@ -40,4 +40,5 @@ def number_guessing_game():
         print(f"You lose. The number was {random_number}.")
         
 
+
 number_guessing_game()
