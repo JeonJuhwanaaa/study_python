@@ -45,9 +45,5 @@ def number_guessing_game():
                 print("You win.")
                 is_win = True
 
-    
-
-
-
 
 number_guessing_game()
