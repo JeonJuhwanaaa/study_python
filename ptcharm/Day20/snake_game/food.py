@@ -14,6 +14,7 @@ class Food(Turtle): # turtle 상속 받기
         random_y = random.randint(-280, 280)
         self.goto(random_x, random_y)
         self.refesh()
+        
 
     # 뱀의 머리가 food 에 닿을 때 food 위치 랜덤으로 다시 생성
     def refesh(self):

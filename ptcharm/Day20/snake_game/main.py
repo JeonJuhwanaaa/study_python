@@ -38,4 +38,5 @@ while run_game:
         scoreboard.update_scoreboard()
         scoreboard.increase_score()
 
+
 screen.exitonclick()
