@@ -17,7 +17,10 @@ screen.onkey(snake.down, "Down")
 screen.onkey(snake.left, "Left")
 screen.onkey(snake.right, "Right")
 
+
+
 run_game = True
+
 while run_game:
     screen.update()
     time.sleep(0.1)

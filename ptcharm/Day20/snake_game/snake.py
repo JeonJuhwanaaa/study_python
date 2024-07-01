@@ -1,6 +1,6 @@
 from turtle import Turtle
 
-STARTING_POSITION = [(0, 0), (-20, 0), (-40, 0)] # 튜플로 설정 인덱스0 -> 뱀의 머리
+STARTING_POSITION = [(0, 0), (-20, 0), (-40, 0), (-60, 0)] # 튜플로 설정 인덱스0 -> 뱀의 머리
 MOVE_DISTANCE = 20
 UP = 90
 DOWN = 270
