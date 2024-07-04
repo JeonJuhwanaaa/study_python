@@ -1,0 +1,52 @@
+## 강의 설명 따라 만들어 본 것.
+
+import time
+from turtle import Screen
+from player import Player
+from car_manager import CarManager
+from scoreboard import Scoreboard
+
+screen = Screen()
+screen.setup(width=600, height=600)
+screen.tracer(0)
+
+player = Player()
+car_manager = CarManager()
+scoreboard = Scoreboard()
+
+screen.listen()
+screen.onkey(player.go_up, "Up")
+
+run_game = True
+
+while run_game:
+    time.sleep(0.1)
+    screen.update()
+
+    car_manager.create_car()
+    car_manager.move_cars()
+
+    # Detect collision with car
+    for car in car_manager.all_cars:
+        if car.distance(player) < 20:
+            run_game = False
+            scoreboard.game_over()
+
+    # Detect successful crossing
+    if player.is_at_finish_line():
+        player.go_to_start()
+        car_manager.level_up()
+        scoreboard.increase_level()
+
+
+
+
+screen.exitonclick()
+
+
+# 소요시간 : 약 1시간
+# Move the turtle with keypress
+# Create and Move the cars / JUST ONE
+# Detect collision with car -> GAME OVER
+# Detect when turtle reaches the other side -> LEVEL UP (SPEED UP)
+# Create a scoreboard
