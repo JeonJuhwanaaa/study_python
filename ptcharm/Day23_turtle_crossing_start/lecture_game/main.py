@@ -39,14 +39,4 @@ while run_game:
         scoreboard.increase_level()
 
 
-
-
 screen.exitonclick()
-
-
-# 소요시간 : 약 1시간
-# Move the turtle with keypress
-# Create and Move the cars / JUST ONE
-# Detect collision with car -> GAME OVER
-# Detect when turtle reaches the other side -> LEVEL UP (SPEED UP)
-# Create a scoreboard
