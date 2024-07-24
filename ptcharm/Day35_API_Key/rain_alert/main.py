@@ -4,7 +4,7 @@ import requests
 ## 버전 3.0 에선 401 코드로 오류.
 ## 버전을 3.0 에서 2.8 로 수정하니 200 코드로 정상.
 OWN_Endpoint = "https://api.openweathermap.org/data/2.8/onecall"
-api_key = "56c955c9fd4d16fb1cd00cfd436a8228"
+api_key = ""
 
 weather_params = {
     "lat": 35.174606,
