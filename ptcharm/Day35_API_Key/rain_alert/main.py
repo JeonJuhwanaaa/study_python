@@ -1,10 +1,18 @@
 import requests
+from dotenv import load_dotenv
+from twilio.rest import Client
+import os
+
+load_dotenv()
 
 # https://openweathermap.org/  -> 날씨 open API 사이트
 ## 버전 3.0 에선 401 코드로 오류.
 ## 버전을 3.0 에서 2.8 로 수정하니 200 코드로 정상.
 OWN_Endpoint = "https://api.openweathermap.org/data/2.8/onecall"
+
 api_key = ""
+account_sid = ""
+auth_token = ""
 
 weather_params = {
     "lat": 35.174606,
@@ -49,4 +57,12 @@ for hour_data in weather_slice:
         # print("Bring an Umbrella.")
         will_rain = True
 if will_rain:
-    print("Bring an Umbrella.")
+    # print("Bring an Umbrella.")
+    client = Client(account_sid, auth_token)
+    message = client.messages \
+        .create(
+        body="",
+        from_="",
+        to=""
+    )
+    print(message.status)
