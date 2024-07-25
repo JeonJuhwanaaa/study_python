@@ -10,6 +10,10 @@ load_dotenv()
 ## 버전을 3.0 에서 2.8 로 수정하니 200 코드로 정상.
 OWN_Endpoint = "https://api.openweathermap.org/data/2.8/onecall"
 
+## .env 파일로 환경변수 활용해서 보안유지.
+# 근데 .gitignore 파일 만들고 .env 파일 넣어도 git push 에서 error 가 걸린다.
+# 이유를 모르겠네..
+
 api_key = ""
 account_sid = ""
 auth_token = ""
