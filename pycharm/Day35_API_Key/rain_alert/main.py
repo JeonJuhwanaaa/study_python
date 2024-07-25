@@ -14,9 +14,9 @@ OWN_Endpoint = "https://api.openweathermap.org/data/2.8/onecall"
 # 근데 .gitignore 파일 만들고 .env 파일 넣어도 git push 에서 error 가 걸린다.
 # 이유를 모르겠네..
 
-api_key = ""
-account_sid = ""
-auth_token = ""
+api_key = os.environ.get("MY_ACTUAL_API_KEY")
+account_sid = os.environ.get("ACCOUNT_SID")
+auth_token = os.environ.get("AUTH_TOKEN")
 
 weather_params = {
     "lat": 35.174606,
@@ -66,7 +66,7 @@ if will_rain:
     message = client.messages \
         .create(
         body="",
-        from_="",
-        to=""
+        from_=os.environ.get("TWILIO_PHONE_NUM"),
+        to=os.environ.get("OWN_PHONE_NUM")
     )
     print(message.status)
