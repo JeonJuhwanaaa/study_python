@@ -11,8 +11,11 @@ WEIGHT_KG = "70"
 HEIGHT_CM = "175"
 AGE = "30"
 
+# Nutritionix API 사이트 -> Dashboard
+# https://developer.nutritionix.com/
 nutritionix_endpoint = "https://trackapi.nutritionix.com/v2/natural/exercise"
 
+# Sheety API 사이트 -> Dashboard
 # https://sheety.co/
 # https://docs.google.com/spreadsheets/d/1o9VIfyguooVGp9I1Z1Zs5ZBvumKm6QORPvzzbvtDSJw/edit?gid=0#gid=0
 sheet_endpoint = os.environ.get("SHEETY_POST_ENDPOINT")
