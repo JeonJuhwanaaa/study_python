@@ -12,7 +12,10 @@ HEIGHT_CM = "175"
 AGE = "30"
 
 nutritionix_endpoint = "https://trackapi.nutritionix.com/v2/natural/exercise"
-sheet_endpoint = "https://api.sheety.co/79ebe14e40c5b3ee66f3e29978b8339a/juhwanWorkouts/workouts"
+
+# https://sheety.co/
+# https://docs.google.com/spreadsheets/d/1o9VIfyguooVGp9I1Z1Zs5ZBvumKm6QORPvzzbvtDSJw/edit?gid=0#gid=0
+sheet_endpoint = os.environ.get("SHEETY_POST_ENDPOINT")
 
 headers = {
     "x-app-id": os.environ.get("NUTRITIONIX_APP_ID"),
